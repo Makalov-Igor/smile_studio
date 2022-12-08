@@ -190,10 +190,9 @@
 
 
 <div class="modal" id="responseMessage">
-    <div class="title-h3">Статус отправки формы:</div>
+    <div class="title-h3">Спасибо!</div>
     <div class="modal-content"></div>
     <div class="push25"></div>
-    <a href="#" class="btn fancyClose min">ok</a>
 </div>
 
 <!--[if lt IE 9]>
