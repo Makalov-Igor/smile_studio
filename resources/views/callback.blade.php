@@ -3,6 +3,7 @@
     <div class="rf">
         <form name="form-callback">
             @csrf
+            <input name="type" type="hidden" value="Заявка на обратный звонок"/>
             <div class="title-h3">Есть вопросы? Мы вам перезвоним!</div>
             <div class="form-group">
                 <input name="user-name" type="text" class="form-control required" placeholder="Ваше имя *" />

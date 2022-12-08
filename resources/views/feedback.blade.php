@@ -13,6 +13,7 @@
             <div class="rf">
                 <form name="form-feedback">
                     @csrf
+                    <input name="type" type="hidden" value="Запись на приём"/>
                     <div class="row min">
                         <div class="col-sm-6">
                             <div class="form-group">
