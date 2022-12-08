@@ -5,7 +5,7 @@
             @csrf
             <div class="title-h3">Есть вопросы? Мы вам перезвоним!</div>
             <div class="form-group">
-                <input name="fio" type="text" class="form-control required" placeholder="Ваше имя *" />
+                <input name="user-name" type="text" class="form-control required" placeholder="Ваше имя *" />
             </div>
             <div class="form-group">
                 <input name="tel" type="text" class="form-control required tel" placeholder="Телефон *" />

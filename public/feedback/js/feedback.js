@@ -24,62 +24,29 @@ window.isset = function (v) {
     return true;
 }
 
-function myconf() {
-    var cf = $.Deferred();
-        $.ajax({
-            type: 'POST',
-            url: 'feedback/',
-            dataType: 'json',
-            data: 'act=cfg',
-            success: function(answer) {
-                cf.resolve(answer.configs);
-            }
-        });
-    return cf;
-}
-
-var mcf = myconf();
-
-mcf.done(function(conf) {
-
-$(document).ready(function() {
-(function() {
-           var fb = $('.feedback');
-           if(fb.length > 0) {
-                fb.each(function(){
-                    var form = $(this).closest('form'), name = form.attr('name');
-                    if(isset(conf[name]) && isset(conf[name].cfg.antispamjs)) {
-                      $(form).prepend('<input type="text" name="'+ conf[name].cfg.antispamjs +'" value="tesby" style="display:none;">');
-                    }
-                });
-            }
-  })();
-});
-
-
 /**
  * Отправка форм.
  *
  */
 
-function feedback(vars) {
-    var bt = $(vars.form).find('.feedback');
+function feedback(vars,type) {
+    var bt = $(vars.form).find(type);
     var btc = bt.clone();
     var bvc = bt.val();
-    var cfg = conf[vars.act].cfg;
 
     $.ajax({
         type: 'POST',
-        url: 'feedback/',
+        url: 'feedback_h/',
         cache: false,
         dataType: 'json',
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         data: 'act=' + vars.act + '&' + vars.data,
         beforeSend: function() {
             $(bt).prop("disabled", true);
             $(bt).addClass('loading');
         },
         success: function(answer) {
-           
+
             $(bt).prop("disabled", false);
             $(bt).removeClass('loading');
 
@@ -104,14 +71,6 @@ function feedback(vars) {
 
 }
 
-    $(document).on('mouseenter mouseover', '.feedback', function(){
-        var form = $(this).closest('form'), name = form.attr('name');
-        if(isset(conf[name]) && isset(conf[name].cfg.antispamjs)) {
-            $('input[name='+ conf[name].cfg.antispamjs +']').val('');
-        }
-    });
-
-
 /**
  * Обработчик кнопки форм.
  * Кнопка должна быть внутри тегов <form> c классом .feedback
@@ -119,15 +78,26 @@ function feedback(vars) {
  *
  */
 
-$(document).on('click', '.feedback', function(){
+$(document).on('click', '.feedback', function(e){
+    e.preventDefault();
    var form = $(this).closest('form'), name = form.attr('name'), obj = {};
        obj.form = form;
        obj.act = name;
        obj.data = $(form).serialize();
 
-      feedback(obj);
+      feedback(obj,'.feedback');
 
     return false;
 });
 
-}); // done
+$(document).on('click', '.callback', function(e){
+    e.preventDefault();
+    var form = $(this).closest('form'), name = form.attr('name'), obj = {};
+    obj.form = form;
+    obj.act = name;
+    obj.data = $(form).serialize();
+
+    feedback(obj,'.callback');
+
+    return false;
+});
