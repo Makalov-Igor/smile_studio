@@ -396,7 +396,7 @@ h1,
     line-height: 1.2;
     margin-bottom: 30px;
     color: #000;
-    font-weight: 600;    
+    font-weight: 600;
 }
 .suptitle-h1{
     font-size: 14px;
@@ -419,7 +419,7 @@ h2,
     line-height: 1.2;
     margin-bottom: 30px;
     color: #000;
-    font-weight: bold; 
+    font-weight: bold;
 }
 h3,
 .title-h3{
@@ -428,20 +428,20 @@ h3,
     line-height: 1.2;
     margin-bottom: 20px;
     color: #000;
-    font-weight: bold; 
+    font-weight: bold;
     text-transform: uppercase;
 }
 h4,
 .title-h4{
-    
+
 }
 h5,
 .title-h5{
-    
+
 }
 h6,
 .title-h6{
-    
+
 }
 p{
     margin-bottom: 20px;
@@ -469,7 +469,7 @@ a.invert:hover{
     color: #1BA3D5;
 }
 strong,
-b, 
+b,
 .bold{
     font-weight: bold;
 }
@@ -592,12 +592,12 @@ img{
 img.left{
     float: left;
     margin-right: 15px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
 }
 img.right{
     float: right;
     margin-left: 15px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
 }
 ul.list,
 ol.list,
@@ -984,7 +984,7 @@ hr{
 		-o-border-radius: 50%;
 		-ms-border-radius: 50%;
 		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;	
+		-moz-border-radius: 50%;
 }
 
 .cssload-inner.cssload-one {
@@ -1740,7 +1740,7 @@ hr{
     left: 0;
 }
 .menu-button.active .icon-menu-burger__line,
-.menu-button.active .icon-menu-burger:before, 
+.menu-button.active .icon-menu-burger:before,
 .menu-button.active .icon-menu-burger:after {
     background: #FF2C3E;
 }
@@ -2576,7 +2576,7 @@ a.uMenuItemA{
     }
     .slide-content .btn{
         padding: 18px 15px;
-        font-size: 11px;
+        font-size: 14px;
         letter-spacing: 0;
     }
     .top-slider-wrapper,
@@ -2624,7 +2624,7 @@ a.uMenuItemA{
     background: url(../images/pattern1.png) -3px -3px #4e4a4a;
     color: rgba(255,255,255,0.6);
 }
-.team-section .slick-prev, 
+.team-section .slick-prev,
 .team-section .slick-next {
     position: absolute;
     display: block;
@@ -2645,12 +2645,12 @@ a.uMenuItemA{
 .team-section .slick-next{
     right: -85px;
 }
-.team-section .slick-prev i, 
+.team-section .slick-prev i,
 .team-section .slick-next i {
     font-size: 26px;
     line-height: 46px;
 }
-.team-section .slick-prev:hover, 
+.team-section .slick-prev:hover,
 .team-section .slick-next:hover{
     border-color: #fff
 }
@@ -2754,6 +2754,13 @@ a.uMenuItemA{
     background: rgb(16 10 10 / 40%);
     opacity: 0.8;
 }
+
+@media (max-width: 1200px) {
+    .consult-section{
+        display: none;
+    }
+}
+
 .consult-section{
     background-repeat: no-repeat;
     background-size: cover;
@@ -3005,14 +3012,14 @@ table.tpl-table{
 table.tpl-table tr:nth-child(odd) {
     background: #FAFAFA;
 }
-table.tpl-table td, 
+table.tpl-table td,
 table.tpl-table th {
     padding: 12px 20px;
     border-left: 1px solid #FAFAFA;
     vertical-align: middle;
     color: #5F5F5F;
 }
-table.tpl-table td:first-child, 
+table.tpl-table td:first-child,
 table.tpl-table th:first-child {
     border-left: none;
 }
@@ -3027,7 +3034,7 @@ table.tpl-table tr:hover td{
     color: #fff;
 }
 @media only screen and (max-width: 767px) {
-    table.tpl-table td, 
+    table.tpl-table td,
     table.tpl-table th {
         padding: 8px 10px;
         font-size: 12px;
@@ -3278,10 +3285,10 @@ table.tpl-table tr:hover td{
 
 /**************************************************   MEDIA QUERIS   *****************************************************/
 @media only screen and (max-width: 1229px) {
-    
+
 }
 @media only screen and (max-width: 991px) {
-    
+
 }
 @media only screen and (max-width: 767px) {
     .modal{
@@ -3289,14 +3296,14 @@ table.tpl-table tr:hover td{
     }
     h1,
     .title-h1{
-        font-size: 30px;   
+        font-size: 30px;
     }
 }
 
 
 
 @media only screen and (min-width: 768px) {
-    
+
 }
 @media only screen and (min-width: 992px){
     /* custom webkit scroll */
@@ -3360,5 +3367,5 @@ table.tpl-table tr:hover td{
 }
 
 .footer_logo{
-    max-width: 20%;
+    max-width: 234px;
 }
