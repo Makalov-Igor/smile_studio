@@ -365,65 +365,25 @@
                 <div class="push10"></div>
             </div>
             <div class="rev-carousel">
+                @foreach($reviews as $review)
                 <div class="item">
                     <div class="element">
                         <div class="element-header relative">
-                            <img src="images/rev1.jpg" />
-                            <div class="title bold black f16">Мария Нагорная</div>
-                            <div class="subtitle f13">менеджер</div>
+                            <img src="{{asset('images/rev_logo.png')}}" />
+                            <div class="title bold black f16">{{ $review->fullname }}</div>
                         </div>
                         <div class="push20"></div>
                         <div class="element-body">
-                            Товарищи! постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов)
-                            участие в формировании системы обучения кадров, соответствует насущным потребностям.
+                            {{ $review->message }}
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="element">
-                        <div class="element-header relative">
-                            <img src="images/rev2.jpg" />
-                            <div class="title bold black f16">Семен Иванов</div>
-                            <div class="subtitle f13">бизнесмен</div>
-                        </div>
-                        <div class="push20"></div>
-                        <div class="element-body">
-                            Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности представляет собой
-                            интересный эксперимент проверки дальнейших направлений развития.
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="element">
-                        <div class="element-header relative">
-                            <img src="images/rev1.jpg" />
-                            <div class="title bold black f16">Мария Нагорная</div>
-                            <div class="subtitle f13">менеджер</div>
-                        </div>
-                        <div class="push20"></div>
-                        <div class="element-body">
-                            Товарищи! постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов)
-                            участие в формировании системы обучения кадров, соответствует насущным потребностям.
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="element">
-                        <div class="element-header relative">
-                            <img src="images/rev2.jpg" />
-                            <div class="title bold black f16">Семен Иванов</div>
-                            <div class="subtitle f13">бизнесмен</div>
-                        </div>
-                        <div class="push20"></div>
-                        <div class="element-body">
-                            Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности представляет собой
-                            интересный эксперимент проверки дальнейших направлений развития.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-
+        <div class="reviews_container">
+            <a href="#reviews_form" class="btn fancyboxModal">Оставить отзыв</a>
+        </div>
         <div class="push50"></div>
     </div>
 
@@ -468,5 +428,6 @@
     </div>
 
     @include('callback')
+    @include('reviews')
 
 @endsection

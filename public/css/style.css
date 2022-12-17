@@ -3369,3 +3369,8 @@ table.tpl-table tr:hover td{
 .footer_logo{
     max-width: 234px;
 }
+
+.reviews_container{
+    display: flex;
+    justify-content: center;
+}

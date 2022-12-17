@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route,
-App\Http\Controllers\MainController,
-App\Http\Controllers\FeedbackController;
+App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +15,6 @@ App\Http\Controllers\FeedbackController;
 */
 
 
-Route::get('/', [MainController::class,'index']);
-Route::post('/feedback_h', [FeedbackController::class,'store']);
+Route::get('/', [Controllers\MainController::class,'index']);
+Route::post('/feedback_h', [Controllers\FeedbackController::class,'store']);
+Route::post('/reviews/add/', [Controllers\ReviewsController::class,'store']);

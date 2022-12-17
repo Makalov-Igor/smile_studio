@@ -3,9 +3,9 @@
  *
  */
 
-function send(data) {
+function send(data,url) {
        $.ajax({
-            url: "feedback_h/",
+            url: url,
             type:"POST",
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             data: data,
@@ -26,10 +26,10 @@ function send(data) {
 
 $(document).on('click', '.feedback', function (e) {
     e.preventDefault();
-    send($(this).closest('form').serialize());
+    send($(this).closest('form').serialize(),'feedback_h/');
 });
 
-$(document).on('click', '.callback', function (e) {
+$(document).on('click', '.reviews', function (e) {
     e.preventDefault();
-    send($(this).closest('form').serialize());
+    send($(this).closest('form').serialize(),'reviews/add/');
 });

@@ -5,5 +5,6 @@ return [
     'name' => 'Имя: ',
     'contacts' => 'Контакты для связи: ',
     'phone' => 'Телефон: ',
-    'messageText' => 'Cообщение: '
+    'messageText' => 'Cообщение: ',
+    'reviewAdded' => 'Мы получили Ваш отзыв.'
 ];
