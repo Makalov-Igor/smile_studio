@@ -877,7 +877,7 @@ hr{
     animation-delay: 1400ms;
 }
 .row.min{
-    margin-left: -5px;
+    margin-left: -95px;
     margin-right: -5px;
 }
 .row.min > div[class^="col-"]{
