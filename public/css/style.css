@@ -526,9 +526,6 @@ textarea:focus::-webkit-input-placeholder{
   display: none;
 }
 .show {
-  display: block;
-}
-.text-left{
     text-align: left;
 }
 .text-center{
@@ -754,6 +751,7 @@ q{
 }
 .btn.white-btn:hover{
     background: #096356;
+    border-color: #096356;
     color: #ffffff;
 }
 .btn.block{
@@ -2538,8 +2536,8 @@ a.uMenuItemA{
 }
 .top-slider .slick-prev:hover,
 .top-slider .slick-next:hover{
-    background: #1C3343;
-    border-color: #1C3343;
+    background: #096457;
+    border-color: #096457;
     color: #fff;
 }
 .top-slider .slick-dots{
@@ -2736,6 +2734,7 @@ a.uMenuItemA{
         -webkit-transform: scale(1.1);
         -moz-transform: scale(1.1);
         -o-transform: scale(1.1);
+    }
     }
 }
 
@@ -3360,6 +3359,7 @@ table.tpl-table tr:hover td{
 
 .office_image {
     height: 400px;
+    margin-top: 200px;
 }
 
 .element img {
