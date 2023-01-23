@@ -5,8 +5,6 @@
         <div class="text-center">
             <div class="title-h1 bold">Запись на приём</div>
             <div class="subtitle-h1">
-                Значимость этих проблем настолько очевидна, что дальнейшее развитие <br/>
-                различных форм деятельности представляет
             </div>
             <div class="push10"></div>
 
