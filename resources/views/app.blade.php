@@ -75,9 +75,9 @@
                 г. Ростов-на-Дону, пер. Днепровский 115Б
             </div>
             <div class="push10"></div>
-            <div class="mob-menu-tel weight800">8(9999) 22-88-88</div>
+            <div class="mob-menu-tel weight800">+7 (863) 307-83-93</div>
             <div class="mob-menu-email">
-                <a href="mailto:finance-group@ultron.pro" class="white f12">finance-group@ultron.pro</a>
+                <a href="mailto:finance-group@ultron.pro" class="white f12">studio-smiles.kochnov@yandex.ru</a>
             </div>
         </div>
         <div class="push10"></div>
@@ -128,10 +128,10 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="element el3 relative">
                                 <div class="header-tel">
-                                    <i class="material-icons">phone</i>8(9999) 22-88-88
+                                    <i class="material-icons">phone</i>+7 (863) 307-83-93
                                 </div>
                                 <div class="header-email">
-                                    <a href="mailto:finance-group@ultron.pro"><i class="material-icons">email</i>finance-group@ultron.pro</a>
+                                    <a href="mailto:studio-smiles.kochnov@yandex.ru"><i class="material-icons">email</i>studio-smiles.kochnov@yandex.ru</a>
                                 </div>
                             </div>
                         </div>

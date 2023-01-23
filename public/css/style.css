@@ -399,7 +399,7 @@ h1,
     font-weight: 600;
 }
 .suptitle-h1{
-    font-size: 14px;
+    font-size: 19px;
     font-weight: bold;
     text-transform: uppercase;
     color: rgb(18 195 170);
@@ -877,7 +877,7 @@ hr{
     animation-delay: 1400ms;
 }
 .row.min{
-    margin-left: -95px;
+    margin-left: -5px;
     margin-right: -5px;
 }
 .row.min > div[class^="col-"]{
@@ -2603,7 +2603,7 @@ a.uMenuItemA{
     overflow: hidden;
 }
 .advantages-wrapper .element .text{
-    height: 60px;
+    height: 80px;
     overflow: hidden;
 }
 .gray-bg{
@@ -3373,4 +3373,8 @@ table.tpl-table tr:hover td{
 .reviews_container{
     display: flex;
     justify-content: center;
+}
+
+.dental_services_title {
+    font-size: 15px;
 }
