@@ -26,10 +26,10 @@ function send(data,url) {
 
 $(document).on('click', '.feedback', function (e) {
     e.preventDefault();
-    send($(this).closest('form').serialize(),'feedback_h/');
+    send($(this).closest('form').serialize(),'feedback_h');
 });
 
 $(document).on('click', '.reviews', function (e) {
     e.preventDefault();
-    send($(this).closest('form').serialize(),'reviews/add/');
+    send($(this).closest('form').serialize(),'reviews/add');
 });
