@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="header-contacts hidden-xs">
-                    <div class="row min">
+                    <div class="row min head_block">
                         <div class="col-md-6 col-lg-4 visible-md visible-lg">
                             <div class="element el1 relative">
                                 <i class="material-icons">place</i>

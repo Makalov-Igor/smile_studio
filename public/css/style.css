@@ -3387,3 +3387,7 @@ table.tpl-table tr:hover td{
 .phone_container {
     width: 300px;
 }
+
+.head_block {
+    margin-left: -120px !important;
+}
