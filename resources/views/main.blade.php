@@ -422,7 +422,7 @@
 
             <div class="push70"></div>
         </div>
-        <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
         <div id="mapexMap"></div>
     </div>
 
