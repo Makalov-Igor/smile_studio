@@ -4,7 +4,7 @@
 @section('content')
     <div class="top-slider-wrapper">
         <div class="top-slider">
-            <div class="item first" style="background: url('{{asset('images/slider/slide1.jpg')}}') 50% 50% no-repeat; background-size: cover;">
+            <div class="item first" style="background: url('{{asset('images/slider/slide1.webp')}}') 50% 50% no-repeat; background-size: cover;">
                 <div class="table">
                     <div class="table-cell">
                         <div class="container">
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item" style="background: url('{{asset('images/slider/slide2.jpg')}}') 50% 50% no-repeat; background-size: cover;">
+            <div class="item" style="background: url('{{asset('images/slider/slide2.webp')}}') 50% 50% no-repeat; background-size: cover;">
                 <div class="table">
                     <div class="table-cell">
                         <div class="container">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item" style="background: url('{{asset('images/slider/slide3.jpg')}}') 50% 50% no-repeat; background-size: cover;">
+            <div class="item" style="background: url('{{asset('images/slider/slide3.webp')}}') 50% 50% no-repeat; background-size: cover;">
                 <div class="table">
                     <div class="table-cell">
                         <div class="container">
