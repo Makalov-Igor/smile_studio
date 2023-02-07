@@ -3,7 +3,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Студия улыбки</title>
+    <title>Студия улыбки - стоматологическая клиника, г. Ростов-на-Дону</title>
+    <meta name="description" content="Стоматологическая клиника Студия Улыбки это
+     эффективное лечение, низкие цены, индивидуальный подход к каждому пациенту!
+      Мы выполняем комплекс стоматологических услуг - ортодонтия, терапия и
+      детское отделение, протезирование, хирургия и имплантация!" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
