@@ -77,7 +77,7 @@
             <div class="push10"></div>
             <div class="mob-menu-tel weight800">+7 (863) 307-83-93</div>
             <div class="mob-menu-email">
-                <a href="mailto:finance-group@ultron.pro" class="white f12">studio-smiles.kochnov@yandex.ru</a>
+                <a href="mailto:studio-smiles.kochnov@yandex.ru" class="white f12">studio-smiles.kochnov@yandex.ru</a>
             </div>
         </div>
         <div class="push10"></div>
