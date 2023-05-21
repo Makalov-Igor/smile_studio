@@ -18,3 +18,7 @@ App\Http\Controllers;
 Route::get('/', [Controllers\MainController::class,'index']);
 Route::post('/feedback_h', [Controllers\FeedbackController::class,'store']);
 Route::post('/reviews/add/', [Controllers\ReviewsController::class,'store']);
+
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
