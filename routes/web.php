@@ -21,4 +21,10 @@ Route::post('/reviews/add/', [Controllers\ReviewsController::class,'store']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::prefix('admin_panel')->middleware('auth')->name('admin')->group(function (){
+//    Route::get('/', [App\Http\Controllers\Admin\AdminPanelController::class, 'index'])->name('adm');
+//});
+
+Route::middleware('auth')->prefix('admin_panel')->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\AdminPanelController::class, 'index'])->name('admin_main_page');
+});
