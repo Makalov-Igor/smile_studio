@@ -3,6 +3,7 @@ $(document).ready(function () {
         let location2 = window.location.protocol + '//' + window.location.host + window.location.pathname;
         let link = this.href;
         if(link == location2){
+            console.log(location2)
             $(this).addClass('active');
             $(this).parent().parent().parent().addClass('menu-is-opening menu-open');
 
@@ -17,13 +18,13 @@ $(document).ready(function () {
     });
 })
 
-tinymce.init({
-    selector: '.editor',
-    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-    toolbar_mode: 'floating',
-    relative_urls : false,
-    file_picker_callback : elFinderBrowser
-});
+// tinymce.init({
+//     selector: '.editor',
+//     plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+//     toolbar_mode: 'floating',
+//     relative_urls : false,
+//     file_picker_callback : elFinderBrowser
+// });
 
 function elFinderBrowser (callback, value, meta) {
     tinymce.activeEditor.windowManager.openUrl({
