@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\EmployeesController;
+use App\Http\Controllers\Admin\AdminPanelController;
 use Illuminate\Support\Facades\Route,
 App\Http\Controllers;
 
@@ -14,17 +17,17 @@ App\Http\Controllers;
 |
 */
 
-
 Route::get('/', [Controllers\MainController::class,'index']);
 Route::post('/feedback_h', [Controllers\FeedbackController::class,'store']);
 Route::post('/reviews/add/', [Controllers\ReviewsController::class,'store']);
 
 Auth::routes();
 
-//Route::prefix('admin_panel')->middleware('auth')->name('admin')->group(function (){
-//    Route::get('/', [App\Http\Controllers\Admin\AdminPanelController::class, 'index'])->name('adm');
-//});
-
-Route::middleware('auth')->prefix('admin_panel')->group(function () {
-    Route::get('/', [App\Http\Controllers\Admin\AdminPanelController::class, 'index'])->name('admin_main_page');
+Route::middleware('auth')
+    ->prefix('admin_panel')
+    ->group(function () {
+    Route::get('/', [AdminPanelController::class, 'index'])
+        ->name('admin_main_page');
+    Route::resource('employees', EmployeesController::class);
 });
+
