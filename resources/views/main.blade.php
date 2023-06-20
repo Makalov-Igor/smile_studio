@@ -405,7 +405,7 @@
                         <div class="element el2 relative">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             <span class="bold f20">+7 (863) 307-83-93</span> <br />
-                            <span class="bold f20">+7 (936) 865-60-06</span>
+                            <span class="bold f20">+7 (939) 865-60-06</span>
                         </div>
                         <div class="element el3 relative">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
