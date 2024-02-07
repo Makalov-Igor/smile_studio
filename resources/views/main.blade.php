@@ -230,10 +230,11 @@
             <div class="push10"></div>
             <div class="team-carousel text-center">
                 @foreach($employees as $employee)
+                    @if($employee->status)
                 <div class="item">
                     <div class="element">
                         <div class="img-wrapper team_photo_container"
-                             style="background-image: url('{{asset("images/team/".$employee->image)}}')">
+                             style="background-image: url('{{asset("storage/".$employee->image)}}')">
                         </div>
                         <div class="push15"></div>
                         <div class="title f15 bold white">
@@ -242,6 +243,7 @@
                         <div class="text f13">{{$employee->position}}</div>
                     </div>
                 </div>
+                    @endif
                 @endforeach
             </div>
         </div>
