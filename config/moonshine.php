@@ -12,7 +12,7 @@ return [
     'dir' => 'app/MoonShine',
     'namespace' => 'App\MoonShine',
 
-    'title' => env('MOONSHINE_TITLE', 'MoonShine'),
+    'title' => env('MOONSHINE_TITLE', 'studio_smile_161'),
     'logo' => env('MOONSHINE_LOGO'),
     'logo_small' => env('MOONSHINE_LOGO_SMALL'),
 
@@ -78,7 +78,6 @@ return [
         'pipelines' => [],
     ],
     'locales' => [
-        'en',
         'ru',
     ],
 
