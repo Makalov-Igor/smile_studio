@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\EmployeeResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
@@ -36,9 +37,10 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                    new MoonShineUserRoleResource()
                ),
             ]),
-
-            MenuItem::make('Documentation', 'https://moonshine-laravel.com')
-               ->badge(fn() => 'Check'),
+            MenuItem::make(
+                static fn() => __('moonshine::ui.resource.employees.title'),
+                new EmployeeResource()
+            ),
         ];
     }
 
