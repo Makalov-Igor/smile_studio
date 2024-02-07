@@ -79,6 +79,17 @@ return [
             'imported' => 'Импортирован',
             'file_required' => 'Файл обязателен',
             'extension_not_supported' => 'Расширение файла не поддерживается'
+        ],
+        'employees' => [
+            'title' => 'Сотрудники',
+            'updated_at' => 'Дата изменения',
+            'fullname' => 'ФИО',
+            'image' => 'Фото',
+            'position' => 'Должность',
+            'status' => 'Активность',
+            'active' => 'Активен',
+            'no_active' => 'Не активен'
         ]
-    ]
+    ],
+
 ];
