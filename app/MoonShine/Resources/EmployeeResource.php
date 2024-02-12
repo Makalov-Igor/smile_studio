@@ -4,20 +4,17 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Employee;
 
-use MoonShine\Fields\Date;
-use MoonShine\Fields\File;
 use MoonShine\Fields\Image;
-use MoonShine\Fields\Number;
 use MoonShine\Fields\Select;
 use MoonShine\Fields\Text;
 use MoonShine\Handlers\ExportHandler;
 use MoonShine\Handlers\ImportHandler;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
-use MoonShine\Fields\ID;
 
 /**
  * @extends ModelResource<Employee>
@@ -61,7 +58,6 @@ class EmployeeResource extends ModelResource
         return [
 
             Block::make([
-
                 Text::make(__('moonshine::ui.resource.employees.fullname'), 'fullname')
                     ->required()
                     ->sortable(),
@@ -84,9 +80,32 @@ class EmployeeResource extends ModelResource
         ];
     }
 
+    protected function afterUpdated(Model $item): Model
+    {
+        $item->update(['updated_at' => Carbon::now()]);
+        return $item;
+    }
+
+    protected function afterCreated(Model $item): Model
+    {
+        $item->update(['created_at' => Carbon::now()]);
+        return $item;
+    }
+
     public function rules(Model $item): array
     {
         return [];
     }
-
+    public function filters(): array
+    {
+        return [
+            Text::make(__('moonshine::ui.resource.employees.fullname'), 'fullname'),
+            Text::make(__('moonshine::ui.resource.employees.position'), 'position'),
+            Select::make(__('moonshine::ui.resource.employees.status'), 'status')
+                ->options([
+                    0 => __('moonshine::ui.resource.employees.no_active'),
+                    1 => __('moonshine::ui.resource.employees.active')
+                ])
+        ];
+    }
 }

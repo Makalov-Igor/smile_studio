@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\MoonShine\Resources\EmployeeResource;
+use App\MoonShine\Resources\RequestResource;
 use App\MoonShine\Resources\ReviewResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
-use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
 use MoonShine\Menu\MenuItem;
 use MoonShine\Resources\MoonShineUserResource;
@@ -45,6 +45,10 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             MenuItem::make(
                 static fn() => __('moonshine::ui.resource.reviews.title'),
                 new ReviewResource()
+            ),
+            MenuItem::make(
+                static fn() => __('moonshine::ui.resource.request.title'),
+                new RequestResource()
             ),
         ];
     }
