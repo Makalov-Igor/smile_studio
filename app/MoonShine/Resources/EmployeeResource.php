@@ -26,13 +26,11 @@ class EmployeeResource extends ModelResource
 {
     protected string $model = Employee::class;
 
-    protected string $title = 'Employees';
-
     public string $column = 'fullname';
-
     protected bool $createInModal = true;
     protected bool $editInModal = true;
     protected bool $detailInModal = true;
+    protected bool $isAsync = true;
     public function __construct()
     {
         $this->title = __('moonshine::ui.resource.employees.title');
