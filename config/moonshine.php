@@ -12,9 +12,9 @@ return [
     'dir' => 'app/MoonShine',
     'namespace' => 'App\MoonShine',
 
-    'title' => env('MOONSHINE_TITLE', 'studio_smile_161'),
-    'logo' => env('MOONSHINE_LOGO'),
-    'logo_small' => env('MOONSHINE_LOGO_SMALL'),
+    'title' => env('MOONSHINE_TITLE', 'интернет-портал стоматологической клиники "Студия улыбки"'),
+    'logo' => env('MOONSHINE_LOGO','images/footer-logo.png'),
+    'logo_small' => env('MOONSHINE_LOGO_SMALL','images/favicon/favicon.ico'),
 
     'route' => [
         'domain' => env('MOONSHINE_URL', ''),
@@ -29,7 +29,7 @@ return [
 
     'use_migrations' => true,
     'use_notifications' => true,
-    'use_theme_switcher' => true,
+    'use_theme_switcher' => false,
 
     'layout' => MoonShineLayout::class,
 
