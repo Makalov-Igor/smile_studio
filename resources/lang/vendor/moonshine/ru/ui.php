@@ -96,6 +96,17 @@ return [
             'updated_at' => 'Дата изменения',
             'fullname' => 'ФИО/Ник',
             'message' => 'Текст отзыва',
+        ],
+        'request' => [
+            'title' => 'Заявки',
+            'created_at' => 'Дата создания',
+            'updated_at' => 'Дата изменения',
+            'firstname' => 'Имя',
+            'lastname' => 'Фамилия',
+            'phone' => 'Телефон',
+            'email' => 'Email',
+            'message' => 'Текст заявки',
+            'source' => 'Тип заявки'
         ]
     ],
 

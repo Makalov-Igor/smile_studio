@@ -8,7 +8,9 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Review;
 
+use MoonShine\Enums\ClickAction;
 use MoonShine\Fields\Date;
+use MoonShine\Fields\DateRange;
 use MoonShine\Fields\Text;
 use MoonShine\Handlers\ExportHandler;
 use MoonShine\Handlers\ImportHandler;
@@ -77,9 +79,25 @@ class ReviewResource extends ModelResource
         ];
     }
 
+    public function filters(): array
+    {
+        return [
+            Text::make(__('moonshine::ui.resource.reviews.fullname'), 'fullname'),
+            Text::make(__('moonshine::ui.resource.reviews.message'), 'message'),
+            DateRange::make(__('moonshine::ui.resource.reviews.created_at'), 'created_at'),
+            DateRange::make(__('moonshine::ui.resource.reviews.updated_at'), 'updated_at')
+        ];
+    }
+
     protected function afterUpdated(Model $item): Model
     {
         $item->update(['updated_at' => Carbon::now()]);
+        return $item;
+    }
+
+    protected function afterCreated(Model $item): Model
+    {
+        $item->update(['created_at' => Carbon::now()]);
         return $item;
     }
 
