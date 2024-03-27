@@ -15,6 +15,7 @@ use MoonShine\Resources\MoonShineUserRoleResource;
 
 class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
 {
+
     protected function resources(): array
     {
         return [];
@@ -58,6 +59,13 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
      */
     protected function theme(): array
     {
-        return [];
+        return [
+            'colors' => [
+                'primary' => '#096457',
+                'secondary' => '#12c3aa',
+                'body' => '#096457',
+            ],
+        ];
+
     }
 }

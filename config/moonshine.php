@@ -5,16 +5,15 @@ use MoonShine\Forms\LoginForm;
 use MoonShine\Http\Middleware\Authenticate;
 use MoonShine\Http\Middleware\SecurityHeadersMiddleware;
 use MoonShine\Models\MoonshineUser;
-use MoonShine\MoonShineLayout;
+use App\MoonShine\MoonShineLayout;
 use MoonShine\Pages\ProfilePage;
 
 return [
     'dir' => 'app/MoonShine',
     'namespace' => 'App\MoonShine',
-
-    'title' => env('MOONSHINE_TITLE', 'интернет-портал стоматологической клиники "Студия улыбки"'),
+    'title' => env('MOONSHINE_TITLE', 'панель управления'),
     'logo' => env('MOONSHINE_LOGO','images/footer-logo.png'),
-    'logo_small' => env('MOONSHINE_LOGO_SMALL','images/favicon/favicon.ico'),
+    'logo_small' => env('MOONSHINE_LOGO_SMALL','images/footer-logo.png'),
 
     'route' => [
         'domain' => env('MOONSHINE_URL', ''),
@@ -77,9 +76,7 @@ return [
         ],
         'pipelines' => [],
     ],
-    'locales' => [
-        'ru',
-    ],
+    'locales' => [],
 
     'global_search' => [
         // User::class
