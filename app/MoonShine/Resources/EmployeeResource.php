@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Laravel\Facades\Image as ImageManager;
@@ -90,9 +91,8 @@ class EmployeeResource extends ModelResource
             'updated_at' => Carbon::now()
         ];
 
-        $image = $this->convertImageToWebp($item);
-
-        if ($image) {
+        if($item->image){
+            $image = $this->convertImageToWebp($item);
             $data['image'] = $image;
         }
 
@@ -125,7 +125,17 @@ class EmployeeResource extends ModelResource
 
     protected function afterCreated(Model $item): Model
     {
-        $item->update(['created_at' => Carbon::now()]);
+        $data = [
+            'updated_at' => Carbon::now()
+        ];
+
+        if($item->image){
+            $image = $this->convertImageToWebp($item);
+            $data['image'] = $image;
+        }
+
+        $item->update($data);
+
         return $item;
     }
 
