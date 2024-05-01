@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\Laravel\Facades\Image as ImageManager;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Employee;
-
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Select;
 use MoonShine\Fields\Text;
@@ -67,7 +70,7 @@ class EmployeeResource extends ModelResource
                     ->sortable(),
 
                 Image::make(__('moonshine::ui.resource.employees.image'), 'image')
-                    ->dir('public/images/team/')
+                    ->dir('images/team/')
                     ->sortable(),
 
                 Select::make(__('moonshine::ui.resource.employees.status'), 'status')
@@ -82,8 +85,42 @@ class EmployeeResource extends ModelResource
 
     protected function afterUpdated(Model $item): Model
     {
-        $item->update(['updated_at' => Carbon::now()]);
+
+        $data = [
+            'updated_at' => Carbon::now()
+        ];
+
+        $image = $this->convertImageToWebp($item);
+
+        if ($image) {
+            $data['image'] = $image;
+        }
+
+        $item->update($data);
         return $item;
+    }
+
+    private function convertImageToWebp(Model $item): ?string
+    {
+        $originalFile = Storage::path('/public/' . $item->image);
+
+        $image = ImageManager::read($originalFile);
+
+        if ($image->width() !== 663 || $image->height() !== 994 || !str_contains($item->image, '.webp')) {
+
+            $image->scale(width: 663, height: 994);
+
+            $fileName = Str::random(15) . '.webp';
+            $path = '/public/images/team/' . $fileName;
+
+            $image->toWebp()->save(Storage::path($path));
+
+            File::delete($originalFile);
+
+            return 'images/team/' . $fileName;
+        }
+
+        return null;
     }
 
     protected function afterCreated(Model $item): Model
