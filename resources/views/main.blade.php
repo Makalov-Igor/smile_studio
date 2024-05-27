@@ -1,17 +1,17 @@
-
 @extends('app')
 
 @section('content')
     <div class="top-slider-wrapper">
         <div class="top-slider">
-            <div class="item first" style="background: url('{{asset('images/slider/slide1.webp')}}') 50% 50% no-repeat; background-size: cover;">
+            <div class="item first"
+                 style="background: url('{{asset('images/slider/slide1.webp')}}') 50% 50% no-repeat; background-size: cover;">
                 <div class="table">
                     <div class="table-cell">
                         <div class="container">
                             <div class="slide-content" data-animation="fadeInUp" data-delay="0.5s">
                                 <div class="title">
-                                    Твоя<br />
-                                    идеальная<br />
+                                    Твоя<br/>
+                                    идеальная<br/>
                                     улыбка!
                                 </div>
                                 <div class="push30"></div>
@@ -21,7 +21,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item" style="background: url('{{asset('images/slider/slide2.webp')}}') 50% 50% no-repeat; background-size: cover;">
+            <div class="item"
+                 style="background: url('{{asset('images/slider/slide2.webp')}}') 50% 50% no-repeat; background-size: cover;">
                 <div class="table">
                     <div class="table-cell">
                         <div class="container">
@@ -43,17 +44,19 @@
                     </div>
                 </div>
             </div>
-            <div class="item" style="background: url('{{asset('images/slider/slide3.webp')}}') 50% 50% no-repeat; background-size: cover;">
+            <div class="item"
+                 style="background: url('{{asset('images/slider/slide3.webp')}}') 50% 50% no-repeat; background-size: cover;">
                 <div class="table">
                     <div class="table-cell">
                         <div class="container">
                             <div class="slide-content" data-animation="fadeInDown" data-delay="0.5s">
                                 <div class="title">
-                                    Гарантия качества <br />
+                                    Гарантия качества <br/>
                                     на все виды услуг.
                                 </div>
                                 <div class="text">
-                                    По данным проводившегося анкетирования клиентов, почти 90% из них обращаются к нам повторно. Они приводят с собой детей, советуют нашу клинику друзьям и знакомым.
+                                    По данным проводившегося анкетирования клиентов, почти 90% из них обращаются к нам
+                                    повторно. Они приводят с собой детей, советуют нашу клинику друзьям и знакомым.
                                 </div>
                                 <div class="push30"></div>
                                 <a href="#callback" class="btn fancyboxModal">Получить консультацию</a>
@@ -85,7 +88,7 @@
                         <div class="img-wrapper">
                             <div class="table">
                                 <div class="table-cell text-center">
-                                    <img src="{{asset('images/adv/adv1.png')}}" />
+                                    <img src="{{asset('images/adv/adv1.png')}}"/>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +101,8 @@
                                 </div>
                             </div>
                             <div class="text f13">
-                                Лечение дефектов развития зубов и челюстно-лицевого скелета с применением брекет-систем, элайнеров, съемных пластин.
+                                Лечение дефектов развития зубов и челюстно-лицевого скелета с применением брекет-систем,
+                                элайнеров, съемных пластин.
                             </div>
                         </div>
                     </div>
@@ -108,7 +112,7 @@
                         <div class="img-wrapper">
                             <div class="table">
                                 <div class="table-cell text-center">
-                                    <img src="{{asset('images/adv/adv2.png')}}" />
+                                    <img src="{{asset('images/adv/adv2.png')}}"/>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +125,8 @@
                                 </div>
                             </div>
                             <div class="text f13">
-                                Лечение и перелечивание каналов, лечение кариеса, профессиональная гигиена, отбеливание, реставрации. Доступно взрослым и детям.
+                                Лечение и перелечивание каналов, лечение кариеса, профессиональная гигиена, отбеливание,
+                                реставрации. Доступно взрослым и детям.
                             </div>
                         </div>
                     </div>
@@ -131,7 +136,7 @@
                         <div class="img-wrapper">
                             <div class="table">
                                 <div class="table-cell text-center">
-                                    <img src="{{asset('images/adv/adv3.png')}}" />
+                                    <img src="{{asset('images/adv/adv3.png')}}"/>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +159,7 @@
                         <div class="img-wrapper">
                             <div class="table">
                                 <div class="table-cell text-center">
-                                    <img src="{{asset('images/adv/adv4.png')}}" />
+                                    <img src="{{asset('images/adv/adv4.png')}}"/>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +186,7 @@
 
     <div class="about-section" id="about">
         <div class="container">
-            <div class="inner" style="background-image: url({{asset('images/doctorl.png')}});">
+            <div class="inner" style="background-image: url({{asset('images/doctorl.svg')}});">
                 <div class="push60 hidden-xs hidden-sm"></div>
                 <div class="push60"></div>
 
@@ -195,16 +200,22 @@
                             За это время мы подарили улыбки мечты тысячам благодарных клиентов.
                         </q>
                         <p>
-                            В работе мы используем только качественные импортные материалы. Для удобства наших пациентов мы используем различные виды
-                            анастезии, в том числе имеются препараты подходящие людям страдающим аллергией, беременным и кормящим мамам.
+                            В работе мы используем только качественные импортные материалы. Для удобства наших пациентов
+                            мы используем различные виды
+                            анастезии, в том числе имеются препараты подходящие людям страдающим аллергией, беременным и
+                            кормящим мамам.
                         </p>
                         <p>
-                            У нас работают исключительно специалисты высокой квалификации, систематически проходящие обучение самым современным методикам и технологиям,
-                            имеющие подтверждающие сертификаты. Мы очень строго относимся к компетенции каждого сотрудника.
+                            У нас работают исключительно специалисты высокой квалификации, систематически проходящие
+                            обучение самым современным методикам и технологиям,
+                            имеющие подтверждающие сертификаты. Мы очень строго относимся к компетенции каждого
+                            сотрудника.
                         </p>
                         <p>
-                            В нашей клиники можно лечиться всей семьей. Для детей у нас оборудован специальный детский кабинет.
-                            Детский стоматолог как опытный психолог использует приёмы показывающие ребенку что лечить зубы не страшно и не больно.
+                            В нашей клиники можно лечиться всей семьей. Для детей у нас оборудован специальный детский
+                            кабинет.
+                            Детский стоматолог как опытный психолог использует приёмы показывающие ребенку что лечить
+                            зубы не страшно и не больно.
                         </p>
                         <div class="push10"></div>
                         <a href="#callback" class="btn fancyboxModal">Получить консультацию</a>
@@ -231,18 +242,30 @@
             <div class="team-carousel text-center">
                 @foreach($employees as $employee)
                     @if($employee->status)
-                <div class="item">
-                    <div class="element">
-                        <div class="img-wrapper team_photo_container"
-                             style="background-image: url('{{asset("storage/".$employee->image)}}')">
+                        <div class="item">
+                            <div class="element">
+                                @if($employee->image)
+                                    <div class="img-wrapper team_photo_container"
+                                         style="background-image: url('{{asset("storage/".$employee->image)}}')">
+                                    </div>
+                                @else
+                                    @if($employee->gender === 'f')
+                                    <div class="img-wrapper team_photo_container"
+                                         style="background-image: url('{{asset("storage/images/team/no_photo_female.webp")}}')">
+                                    </div>
+                                    @else
+                                        <div class="img-wrapper team_photo_container"
+                                             style="background-image: url('{{asset("storage/images/team/no_photo_male.webp")}}')">
+                                        </div>
+                                    @endif
+                                @endif
+                                <div class="push15"></div>
+                                <div class="title f15 bold white">
+                                    {{$employee->fullname}}
+                                </div>
+                                <div class="text f13">{{$employee->position}}</div>
+                            </div>
                         </div>
-                        <div class="push15"></div>
-                        <div class="title f15 bold white">
-                            {{$employee->fullname}}
-                        </div>
-                        <div class="text f13">{{$employee->position}}</div>
-                    </div>
-                </div>
                     @endif
                 @endforeach
             </div>
@@ -253,17 +276,20 @@
 
     @include('feedback')
 
-    <div class="consult-section relative" style="background-image: url('{{asset('images/consult-section.jpg')}}');">
+    <div class="consult-section relative" style="background-image: url('{{asset('images/consult-section.webp')}}');">
         <div class="push70"></div>
 
         <div class="container relative">
             <div class="text-center white office_image team_photo">
                 <div class="title-h1 white bold">Индивидуальный подход к каждому пациенту</div>
                 <div class="subtitle-h1 individual">
-                    По завершении лечения мы обязательно приглашаем пациентов на профилактические осмотры, чтобы исключить вероятность нежелательных последствий. На все виды вмешательств выдаем длительную гарантию.
+                    По завершении лечения мы обязательно приглашаем пациентов на профилактические осмотры, чтобы
+                    исключить вероятность нежелательных последствий. На все виды вмешательств выдаем длительную
+                    гарантию.
                 </div>
                 <div class="push10"></div>
-                <a href="#callback" class="btn white-btn min fancyboxModal"><i class="material-icons">settings_phone</i> Получить бесплатную консультацию</a>
+                <a href="#callback" class="btn white-btn min fancyboxModal"><i class="material-icons">settings_phone</i>
+                    Получить бесплатную консультацию</a>
             </div>
         </div>
 
@@ -283,7 +309,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="element">
                         <div class="img-wrapper">
-                            <img src="{{asset('images/hits/hit1.png')}}" />
+                            <img src="{{asset('images/hits/hit1.png')}}"/>
                         </div>
                         <div class="push15"></div>
                         <div class="title f16 bold black">
@@ -299,7 +325,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="element delay-200">
                         <div class="img-wrapper">
-                            <img src="{{asset('images/hits/hit1.png')}}" />
+                            <img src="{{asset('images/hits/hit1.png')}}"/>
                         </div>
                         <div class="push15"></div>
                         <div class="title f16 bold black">
@@ -315,7 +341,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="element delay-400">
                         <div class="img-wrapper">
-                            <img src="{{asset('images/hits/hit2.png')}}" />
+                            <img src="{{asset('images/hits/hit2.png')}}"/>
                         </div>
                         <div class="push15"></div>
                         <div class="title f16 bold black">
@@ -331,7 +357,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="element delay-600">
                         <div class="img-wrapper">
-                            <img src="{{asset('images/hits/hit3.png')}}" />
+                            <img src="{{asset('images/hits/hit3.png')}}"/>
                         </div>
                         <div class="push15"></div>
                         <div class="title f16 bold black">
@@ -346,7 +372,8 @@
                 </div>
             </div>
             <div class="push20"></div>
-            <a href="#" class="btn min color-scheme-defauult-btn2 invert"><i class="fa fa-calculator f18" aria-hidden="true"></i> Скачать прайс-лист</a>
+            <a href="#" class="btn min color-scheme-defauult-btn2 invert"><i class="fa fa-calculator f18"
+                                                                             aria-hidden="true"></i> Скачать прайс-лист</a>
         </div>
 
         <div class="push60"></div>
@@ -367,18 +394,18 @@
             </div>
             <div class="rev-carousel">
                 @foreach($reviews as $review)
-                <div class="item">
-                    <div class="element">
-                        <div class="element-header relative">
-                            <img src="{{asset('images/rev_logo.png')}}" />
-                            <div class="title bold black f16">{{ $review->fullname }}</div>
-                        </div>
-                        <div class="push20"></div>
-                        <div class="element-body">
-                            {{ $review->message }}
+                    <div class="item">
+                        <div class="element">
+                            <div class="element-header relative">
+                                <img src="{{asset('images/rev_logo.png')}}"/>
+                                <div class="title bold black f16">{{ $review->fullname }}</div>
+                            </div>
+                            <div class="push20"></div>
+                            <div class="element-body">
+                                {{ $review->message }}
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -406,12 +433,12 @@
                         </div>
                         <div class="element el2 relative">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            <span class="bold f20">+7 (863) 307-83-93</span> <br />
+                            <span class="bold f20">+7 (863) 307-83-93</span> <br/>
                             <span class="bold f20">+7 (939) 865-60-06</span>
                         </div>
                         <div class="element el3 relative">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            Режим работы: с 9.00 - 19.00, <br />
+                            Режим работы: с 9.00 - 19.00, <br/>
                             выходной воскресенье
                         </div>
                         <div class="element el4 relative">
