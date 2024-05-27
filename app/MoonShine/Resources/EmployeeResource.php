@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Laravel\Facades\Image as ImageManager;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Employee;
+use MoonShine\Fields\Enum;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Select;
 use MoonShine\Fields\Text;
@@ -31,6 +33,7 @@ class EmployeeResource extends ModelResource
     protected bool $editInModal = true;
     protected bool $detailInModal = true;
     protected bool $isAsync = true;
+
     public function __construct()
     {
         $this->title = __('moonshine::ui.resource.employees.title');
@@ -69,6 +72,12 @@ class EmployeeResource extends ModelResource
                     ->required()
                     ->sortable(),
 
+                Select::make(__('moonshine::ui.resource.employees.gender'), 'gender')
+                    ->options([
+                        'm' => __('moonshine::ui.resource.employees.male'),
+                        'f' => __('moonshine::ui.resource.employees.female')
+                    ]),
+
                 Image::make(__('moonshine::ui.resource.employees.image'), 'image')
                     ->dir('images/team/')
                     ->sortable(),
@@ -90,7 +99,7 @@ class EmployeeResource extends ModelResource
             'updated_at' => Carbon::now()
         ];
 
-        if($item->image){
+        if ($item->image) {
             $image = $this->convertImageToWebp($item);
             $data['image'] = $image;
         }
@@ -118,7 +127,7 @@ class EmployeeResource extends ModelResource
             File::delete($originalPath);
             return 'images/team/' . $fileName;
         }
-        return 'images/team/' . $originalName;
+        return $originalName;
     }
 
     protected function afterCreated(Model $item): Model
@@ -127,7 +136,7 @@ class EmployeeResource extends ModelResource
             'updated_at' => Carbon::now()
         ];
 
-        if($item->image){
+        if ($item->image) {
             $image = $this->convertImageToWebp($item);
             $data['image'] = $image;
         }
@@ -141,6 +150,7 @@ class EmployeeResource extends ModelResource
     {
         return [];
     }
+
     public function filters(): array
     {
         return [

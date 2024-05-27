@@ -88,7 +88,10 @@ return [
             'position' => 'Должность',
             'status' => 'Активность',
             'active' => 'Активен',
-            'no_active' => 'Не активен'
+            'gender' => 'Пол',
+            'no_active' => 'Не активен',
+            'female' => 'Женский',
+            'male' => 'Мужской'
         ],
         'reviews' => [
             'title' => 'Отзывы',
