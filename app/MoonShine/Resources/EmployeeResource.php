@@ -76,10 +76,12 @@ class EmployeeResource extends ModelResource
                     ->options([
                         'm' => __('moonshine::ui.resource.employees.male'),
                         'f' => __('moonshine::ui.resource.employees.female')
-                    ]),
+                    ])
+                    ->sortable(),
 
                 Image::make(__('moonshine::ui.resource.employees.image'), 'image')
                     ->dir('images/team/')
+                    ->removable()
                     ->sortable(),
 
                 Select::make(__('moonshine::ui.resource.employees.status'), 'status')
