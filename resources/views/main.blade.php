@@ -434,7 +434,7 @@
                         <div class="element el2 relative">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             <span class="bold f20">+7 (863) 307-83-93</span> <br/>
-                            <span class="bold f20">+7 (939) 865-60-06</span>
+                            <span class="bold f20">+7 (939) 865-60-06</span> <br/>
                             <span class="bold">В случае необходимости получения какой-либо помощи или возникновении
                                 вопросов обращайтесь к директору клиники Кочнову Андрею Андреевичу 8-928-627-63-20</span>
                         </div>
